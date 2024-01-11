@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="image/bomb_red.png">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Saper</title>
+</head>
+
+<body>
+    <div class="none_display" id="tools">
+        <button class="tools_button" id="watch_bomb" style="width:auto;cursor: auto;" title="Осталось бомб"></button>
+
+
+        <button class="tools_button" onclick="size_field_plus()" title="Увеличить"> + </button>
+        <button class="tools_button" onclick="size_field_minus()" title="Уменьшить"> - </button>
+
+
+        <button class="tools_button" id="time" style="width:auto;cursor:auto;" title="Время">0</button>
+        <button class="tools_button" id="time" onclick="Clue()" title="Помощь">?</button>
+
+        <button class="tools_img" onclick="replayGame()" title="Начать c начала" style="margin-left:40px"><img
+                src="image/play.jpg" width="34px" height="34px"></button>
+        <button class="tools_img" onclick="location.reload()" title="Новая игра"><img src="image/restart.jpg"
+                width="34px" height="34px"></button>
+
+    </div>
+    <div class="none_display" id="win">Победа!</div>
+    <div class="fon_container" id="fon">
+
+
+
+        <div id="first_screen">
+            <div>
+
+                <h1 id="head">Выберите размер поля</h1>
+                <ul class="time-list" id="time-list">
+                    <li>
+                        <button class="seil-btn" data-time="10" onclick="set_count_seil(10)" id="seil10">
+                            10 на 10
+                        </button>
+                    </li>
+                    <li>
+                        <button class="seil-btn" data-time="20" onclick="set_count_seil(20)" id="seil20">
+                            20 на 20
+                        </button>
+                    </li>
+                    <li>
+                        <button class="seil-btn" data-time="30" onclick="set_count_seil(30)" id="seil30">
+                            30 на 30
+                        </button>
+                    </li>
+                    <li>
+                        <button class="seil-btn" data-time="40" onclick="set_count_seil(40)" id="seil40">
+                            40 на 40
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+
+                <h1 id="hard">Выберите сложность</h1>
+                <ul class="time-list" id="hard-list">
+                    <li>
+                        <button class="bomb-btn" data-time="10" onclick="set_count_bomb(10)" id="bomb10">
+                            Легко
+                        </button>
+                    </li>
+                    <li>
+                        <button class="bomb-btn" data-time="15" onclick="set_count_bomb(12)" id="bomb12">
+                            Средне
+                        </button>
+                    </li>
+                    <li>
+                        <button class="bomb-btn" data-time="20" onclick="set_count_bomb(17)" id="bomb17">
+                            Трудно
+                        </button>
+                    </li>
+                    <li>
+                        <button class="bomb-btn" data-time="25" onclick="set_count_bomb(20)" id="bomb20">
+                            Невозможно
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="none_display" id="board"> </div>
+        <div>
+            <button onclick="newGame()" id="demo" class="none_display">Начать игру</button>
+        </div>
+    </div>
+
+
+    <div id="buffer" style="display: inline;"></div>
+
+    <script src="app.js"></script>
+    <script src="creating_game_field.js"></script>
+</body>
+
+</html>
